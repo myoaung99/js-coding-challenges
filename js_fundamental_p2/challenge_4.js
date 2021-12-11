@@ -49,3 +49,13 @@ for (let i = 0; i < bills.length; i++) {
   totals.push(total);
   console.log(`Bill is: ${bills[i]}\nTip is: ${tip}\nTotal is: ${total}`);
 }
+
+const calcAverage = (arr) => {
+  let sum = 0;
+  arr.forEach((element) => {
+    sum += element;
+  });
+  return Math.round((sum / arr.length) * 10) / 10;
+};
+
+const avgTotal = calcAverage(totals);
